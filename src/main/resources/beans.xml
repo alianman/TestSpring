@@ -7,8 +7,8 @@
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="mailService" class="by.st.spring.MailService" factory-method="getInstance"
-          init-method="init" destroy-method="destroy">
-        <property name="mainAddress" ref="mailServiceAddress"/>
+          init-method="init" destroy-method="destroy" autowire="byType">
+        <!--<property name="mainAddress" ref="mailServiceAddress"/>-->
         <property name="name" value="MyMailService"/>
         <property name="mirrors">
             <list>
